@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "3c13d1c4-e83f-42f1-a0b2-4b9b0d5f6eb5",
+		"name": "Albums",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44222923",
+		"_collection_link": "https://bensalahkhaled.postman.co/workspace/Ben-Salah-Khaled's-Workspace~aa0ad371-571c-4364-8ea3-1bc60a22b2c9/collection/44222923-3c13d1c4-e83f-42f1-a0b2-4b9b0d5f6eb5?action=share&source=collection_link&creator=44222923"
+	},
+	"item": [
+		{
+			"name": "Créer album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Vacances 2025\",\r\n  \"description\": \"Photos des vacances d'été\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album"
+			},
+			"response": []
+		},
+		{
+			"name": "récupérer les photos d'un album",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/album/6819e5e25a3a8662a024f83d/photos"
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer album",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/albums?title=Vacances 2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"albums"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Vacances 2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer une photo spécifique",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/album/6819e5e25a3a8662a024f83d/photo/6819e7565a3a8662a024f842"
+			},
+			"response": []
+		},
+		{
+			"name": "récupérer les photos après delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/album/6819e5e25a3a8662a024f83d/photos"
+			},
+			"response": []
+		}
+	]
+}

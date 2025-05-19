@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "84c0deae-79ed-4d37-b316-c9ba80fe6c9a",
+		"name": "Photos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44222923",
+		"_collection_link": "https://bensalahkhaled.postman.co/workspace/Ben-Salah-Khaled's-Workspace~aa0ad371-571c-4364-8ea3-1bc60a22b2c9/collection/44222923-84c0deae-79ed-4d37-b316-c9ba80fe6c9a?action=share&source=collection_link&creator=44222923"
+	},
+	"item": [
+		{
+			"name": "créer photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"title\": \"Test2\",\r\n    \"url\": \"https://example.com/test.jpg\",\r\n    \"description\": \"test\",\r\n    \"created_at\": \"2024-04-06T12:15:00.000Z\"\r\n  },\r\n  {\r\n    \"title\": \"vacances\",\r\n    \"url\": \"https://example.com/vac.jpg\",\r\n    \"description\": \"les vacances\",\r\n    \"created_at\": \"2024-04-06T12:15:00.000Z\"\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album/6819e5e25a3a8662a024f83d/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "MAJ photo dans un album",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Vacances 2024\",\r\n  \"description\": \"Mise à jour de l'album\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album/6819e5e25a3a8662a024f83d/photo/6819e7565a3a8662a024f842"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/album/6819e5e25a3a8662a024f83d/photo/6819ecee95830834f6b91a1f"
+			},
+			"response": []
+		}
+	]
+}
